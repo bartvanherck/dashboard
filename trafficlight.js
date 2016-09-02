@@ -19,13 +19,12 @@ angular.
     '<button type="button" ng-click="activate(\'green\')">Green</button>' +
     '<button type="button" ng-click="activate(\'off\')">Off</button>',
     controller: function DashBoardController($scope){
-        var colors = ['off', 'red', 'green', 'yellow'];
-        $scope.color = colors[0];
+        $scope.color = 'off';
         $scope.activate = function(color){
             $scope.color = color; 
         };
-        $scope.isRed = function() { return $scope.color === colors[1]; };
-        $scope.isYellow = function() { return $scope.color === colors[3]; };
-        $scope.isGreen = function() { return $scope.color === colors[2]; };
+        $scope.isRed = function() { return $scope.color === 'red'; };
+        $scope.isYellow = function() { return $scope.color === 'yellow'; };
+        $scope.isGreen = function() { return $scope.color === 'green'; };
     }
   });
