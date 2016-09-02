@@ -8,9 +8,9 @@ angular.
       '<div class="protector"></div>' +
       '<div class="protector"></div>' +
       '<div class="trafficlightbody">' +
-        '<div class="red" ng-style="{opacity : isRed() ? 1 : 0.1}"></div>' +
-        '<div class="yellow" ng-style="{opacity : isYellow() ? 1 : 0.1}"></div>' +
-        '<div class="green" ng-style="{opacity : isGreen() ? 1 : 0.1}"></div>' +
+        '<div ng-class="isRed() ? \'red on\' : \'red off\' "></div>' + 
+        '<div ng-class="isYellow() ? \'yellow on\' : \'yellow off\' "></div>' + 
+        '<div ng-class="isGreen() ? \'green on\' : \'green off\' "></div>' + 
       '</div>' +
     '</div>' +
     '</div>' +
