@@ -1,6 +1,6 @@
 describe('Trafficlight', function() {
     var ctrl;
-    beforeEach(module('dashboardApp'));
+    beforeEach(module('trafficLight'));
     beforeEach(inject(function($componentController){
         ctrl = $componentController('trafficLight');
     }));

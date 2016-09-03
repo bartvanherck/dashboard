@@ -1,5 +1,5 @@
 angular.
-  module('dashboardApp').
+  module('trafficLight').
   component('trafficLight', {
     template:
       '<div class="container">' +
