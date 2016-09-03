@@ -1,0 +1,23 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "A dashboard application",
+  "main": "angular.min.js",
+  "dependencies": {
+    "jasmine-core": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartvanherck/dashboard.git"
+  },
+  "author": "Bart Vanherck",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bartvanherck/dashboard/issues"
+  },
+  "homepage": "https://github.com/bartvanherck/dashboard#readme"
+}
