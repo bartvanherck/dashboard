@@ -1,0 +1,10 @@
+{
+  "status": 
+  [ 
+      { 
+          "id": 1, 
+          "project": "cronos", 
+          "status": "red" 
+      }
+  ]
+}
