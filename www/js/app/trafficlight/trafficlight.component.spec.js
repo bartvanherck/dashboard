@@ -1,7 +1,8 @@
 describe('Trafficlight', function() {
-    var ctrl;
+    var ctrl, $httpBackend;
     beforeEach(module('trafficLight'));
-    beforeEach(inject(function($componentController){
+    beforeEach(inject(function($componentController, _$httpBackend_){
+        $httpBackend = _$httpBackend_; 
         ctrl = $componentController('trafficLight');
     }));
 
@@ -38,6 +39,18 @@ describe('Trafficlight', function() {
         expect(ctrl.isRed()).toBe(false);
         expect(ctrl.isYellow()).toBe(false);
         expect(ctrl.isGreen()).toBe(false);
+    });
+
+    describe('http requests', function() {
+        it('fetch status with http returns red', function() { 
+            url = 'http://localhost:3000/status/cronos'; 
+            $httpBackend.expectGET(url).respond(
+                {"id": 1, "project": "cronos", "status": "red"}
+            ); 
+            ctrl.fetchData();
+            $httpBackend.flush(); 
+            expect(ctrl.isRed()).toBe(true);
+        });
     });
 });
 
