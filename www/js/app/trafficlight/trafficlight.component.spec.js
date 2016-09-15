@@ -42,7 +42,17 @@ describe('Trafficlight', function() {
     });
 
     describe('http requests', function() {
-
+        /*
+        beforeEach(inject(function($compile, $rootScope) {
+            var parentScope = $rootScope.$new();
+            parentScope.myVar = 'test';
+            var element = angular.element('<traffic-light title="the new title" project="myproject"></traffic-light>');
+            var compiledElement = $compile(element)(parentScope);
+            parentScope.$digest();
+            var scope = compiledElement.isolateScope();
+        }));
+        */
+    
         it('fetch status with http returns red', function() { 
             url = 'http://localhost:3000/status/undefined'; 
             $httpBackend.expectGET(url).respond(

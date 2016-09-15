@@ -7,7 +7,8 @@ angular.
             title: '@',
             project: '@'
         },
-        controller: ['$http', function TrafficlightController($http) {
+        controller: ['$http', '$window', 
+                     function TrafficlightController($http, $window) {
             "use strict";
             
             var self = this;
@@ -25,5 +26,8 @@ angular.
                     self.color = data.status;
                 });
             };
+            self.go = function (path) {
+                $window.open(path);
+            }
         }]
     });
