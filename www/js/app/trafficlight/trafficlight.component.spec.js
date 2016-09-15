@@ -42,8 +42,9 @@ describe('Trafficlight', function() {
     });
 
     describe('http requests', function() {
+
         it('fetch status with http returns red', function() { 
-            url = 'http://localhost:3000/status/cronos'; 
+            url = 'http://localhost:3000/status/undefined'; 
             $httpBackend.expectGET(url).respond(
                 {"id": 1, "project": "cronos", "status": "red"}
             ); 

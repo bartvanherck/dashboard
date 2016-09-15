@@ -1,8 +1,12 @@
 
 angular.
-     module('trafficLight').
-     component('trafficLight', {
+    module('trafficLight').
+    component('trafficLight', {
         templateUrl: 'js/app/trafficlight/trafficlight.template.html',
+        bindings: {
+            title: '@',
+            project: '@'
+        },
         controller: ['$http', function TrafficlightController($http) {
             "use strict";
             
@@ -15,7 +19,8 @@ angular.
             self.isYellow = function () { return self.color === 'yellow'; };
             self.isGreen = function () { return self.color === 'green'; };
             self.fetchData = function () {
-                $http.get('http://localhost:3000/status/cronos').then(function (response) {
+                $http.get('http://localhost:3000/status/' + self.project
+                         ).then(function (response) {
                     var data = response.data;
                     self.color = data.status;
                 });
